@@ -17,6 +17,8 @@ export class CartSummary extends Component {
         `btn btn-sm bg-dark text-white ${this.props.cartItems === 0? "disabled": ""}`;
 
     render = () => 
+        console.log("CartSummary: render") ||
+         
         <div className="float-right">
             <small>
                 {this.getSummary()}

@@ -23,7 +23,6 @@ createServer();
 app.use(cors());
 app.use(jsonServer.bodyParser);
 app.use("/api", (req, resp, next) => {
-    console.log("I'm here  4");
     router(req, resp, next);
 });
 

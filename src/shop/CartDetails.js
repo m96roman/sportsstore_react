@@ -8,6 +8,7 @@ export class CartDetails extends Component {
         `btn btn-secondary m-1 ${this.props.cartItems === 0 ? "disabled" : ""}`;
 
     render = () =>
+        console.log("CartDetails: render") ||
         <div className="m-3">
             <h2 className="text-center">Your Cart</h2>
             <table className="table table-bordered table-striped">

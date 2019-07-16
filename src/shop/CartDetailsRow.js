@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 export class CartDetailsRow extends Component {
 
     handleChange = (product, event) => {
-        this.props.updateQuantity(product, event.target.value);
+        this.props.updateQuantity(product, parseInt(event.target.value));
     }
 
     render = () => {
+
+        console.log("CartDetailsRows: render");
+
         if(!this.props.cart || this.props.cart.length === 0){
             return <tr>
                 <td colSpan="5">Your cart is empty</td>

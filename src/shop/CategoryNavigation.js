@@ -3,8 +3,10 @@ import { ToogleLink } from '../ToogleLink';
 
 export class CategoryNavigation extends Component {
     render = () => {
+        console.log("CategoryNavigation: render");
+        console.log(this.props);
         return <Fragment>
-            <ToogleLink to={this.props.baseUrl} exact={true}>All</ToogleLink>
+            <ToogleLink to={`${this.props.baseUrl}/all`} exact={false}>All</ToogleLink>
             {
                 this.props.categories && this.props.categories.map(cat =>
                     <ToogleLink
