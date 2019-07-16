@@ -32,7 +32,7 @@ export class PaginationControls extends Component {
                             <option value={s} key={s}>{s} per page</option>)
                     }
                 </select>
-                <select className="form-control"j
+                <select className="form-control"
                         onChange={this.handleSortPropertyChange}
                         value={this.props.sortKey || this.sortKeys[0]}> 
                     {

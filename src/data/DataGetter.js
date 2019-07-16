@@ -3,14 +3,17 @@ import {DataTypes} from './Types';
 
 export class DataGetter extends Component{
     render = () => 
+        console.log("DataGetter: render") ||
         <React.Fragment>
             {this.props.children}
         </React.Fragment>
     
     componentDidUpdate = () => 
+        console.log("DataGetter: didUpdate") ||
         this.getData();
 
     componentDidMount = () => 
+        console.log("DataGetter: didMount") ||
         this.getData();
 
     getData = () => {
@@ -24,8 +27,12 @@ export class DataGetter extends Component{
                 : this.props.match.params.category
         }
 
+        console.log(rtData);
+
         if(Object.keys(rtData).find(key => rtData[key] !== dsData[key])){
             this.props.loadData(DataTypes.PRODUCTS, rtData);
+        }else{
+            console.log("DataGetter: do nothing");
         }
     }
 }

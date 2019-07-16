@@ -4,7 +4,6 @@ import { ToogleLink } from '../ToogleLink';
 export class CategoryNavigation extends Component {
     render = () => {
         console.log("CategoryNavigation: render");
-        console.log(this.props);
         return <Fragment>
             <ToogleLink to={`${this.props.baseUrl}/all`} exact={false}>All</ToogleLink>
             {

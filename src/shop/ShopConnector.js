@@ -26,11 +26,6 @@ const mapDispatchToProps = {
 export const ShopConnector = connect(mapStateToProps, mapDispatchToProps)(
     class extends Component {
 
-        constructor() {
-            console.log("ShopConnector: IN CONSTRUCTOR");
-            super();
-        }
-
         render = () =>
             console.log("ShopConnector: render") ||
 
