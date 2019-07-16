@@ -32,7 +32,9 @@ export class CartDetails extends Component {
                 <Link className="btn btn-primary m-1" to="/shop">
                     Continue Shopping
                 </Link>
-                <Link className={this.getLinkClasses()} to="/shop/checkout">
+                <Link   className={this.getLinkClasses()} 
+                        to="/shop/checkout"
+                        disabled={this.props.cart === undefined || this.props.cart === []} >
                     Checkout
                 </Link>
             </div>
