@@ -28,7 +28,6 @@ export const ShopReducer = (storeData, action) => {
                 order: action.payload.data
             }
         default:
-            console.log(`ShopReducer: DEFAULT ${action.type}`);
             return storeData || {};
     }
 }
