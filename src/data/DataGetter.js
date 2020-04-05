@@ -3,17 +3,14 @@ import {DataTypes} from './Types';
 
 export class DataGetter extends Component{
     render = () => 
-        console.log("DataGetter: render") ||
         <React.Fragment>
             {this.props.children}
         </React.Fragment>
     
     componentDidUpdate = () => 
-        console.log("DataGetter: didUpdate") ||
         this.getData();
 
-    componentDidMount = () => 
-        console.log("DataGetter: didMount") ||
+    componentDidMount = () =>
         this.getData();
 
     getData = () => {
